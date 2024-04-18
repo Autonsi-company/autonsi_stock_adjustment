@@ -1,0 +1,1 @@
+# autonsi_stock_adjustment
