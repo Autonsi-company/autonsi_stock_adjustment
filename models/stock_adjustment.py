@@ -17,9 +17,11 @@ class StockAdjustmentOrder(models.Model):
 
 class StockCheckOrder(models.Model):
     _name = 'stock.check.order'
+    parent_location = fields.Many2one(
+        "stock.location", "Parent Location", related='adjustment_order_id.location_id')
 
     location_id = fields.Many2one(
-        "stock.location", "Rack", domain=([('location_type', '=', 'rack')]))
+        "stock.location", "Rack", domain="[('id', 'child_of', parent_location), ('id', '!=', parent_location)]")
     worker_id = fields.Many2many("res.partner")
     start_date = fields.Datetime("Start Date")
     end_date = fields.Datetime("End Date")
