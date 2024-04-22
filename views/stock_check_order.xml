@@ -52,6 +52,7 @@
                         <page string="Rack">
                             <field name="check_order_ids">
                                 <tree editable="bottom">
+                                    <field name="parent_location" />
                                     <field name="location_id"/>
                                     <field name="worker_id"/>
                                     <field name="start_date"/>
