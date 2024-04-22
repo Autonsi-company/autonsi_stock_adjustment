@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<templates id="template" xml:space="preserve">-->
+<!--    <t t-extend="ListView.buttons">-->
+<!--        <t t-jquery="div.o_list_buttons" t-operation="append" t-if="widget.modelName=='autonsi.pplan'">-->
+<!--           <button type="button" class="btn btn-primary o_list_button_custom_view" accesskey="u">-->
+<!--                Custom View-->
+<!--            </button>-->
+<!--        </t>-->
+<!--    </t>-->
+<!--</templates>-->
+
+<templates>
+	<t t-extend="ListView.buttons" t-name="button_create_stock_check_order.buttons">
+		<t t-jquery="button.o_list_button_add" t-operation="replace">
+			<button type="button" class="btn btn-primary open_wizard_action" style="margin-right: 5px">
+            	Create
+			</button>
+		</t>
+	</t>
+</templates>
