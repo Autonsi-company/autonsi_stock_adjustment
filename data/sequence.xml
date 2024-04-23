@@ -1,0 +1,18 @@
+<odoo noupdate="1">
+    <data noupdate="1">
+        <record id="seq_stock_adjustment_order" model="ir.sequence">
+            <field name="name">Stock Adjustment Order Sequence</field>
+            <field name="code">stock.adjustment.order</field>
+            <field name="prefix">SC</field>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="seq_stock_check_order" model="ir.sequence">
+            <field name="name">Stock Check Order Sequence</field>
+            <field name="code">stock.check.order</field>
+            <field name="prefix">SCR</field>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+    </data>
+</odoo>
