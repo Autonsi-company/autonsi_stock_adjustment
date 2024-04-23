@@ -10,8 +10,10 @@ class CheckOrderDetail(models.Model):
     lot_id = fields.Many2one("stock.production.lot")
     available_qty = fields.Float("Available Quantity")
     on_hand_qty = fields.Float("On hand Quantity")
-    counted_qty = fields.Float("Counted Quantity", default=lambda self: self.on_hand_qty)
-    difference = fields.Float("Difference", compute='compute_difference', store=True)
+    counted_qty = fields.Float(
+        "Counted Quantity", default=lambda self: self.on_hand_qty)
+    difference = fields.Float(
+        "Difference", compute='compute_difference', store=True)
     quant_id = fields.Many2one('stock.quant')
 
     @api.depends('counted_qty')
@@ -19,3 +21,4 @@ class CheckOrderDetail(models.Model):
         for rec in self:
             rec.difference = rec.counted_qty - rec.on_hand_qty
 
+# test CI-DC
