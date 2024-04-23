@@ -14,12 +14,15 @@
     ],
     "data": [
         "security/ir.model.access.csv",
-        "views/stock_check_order.xml"
+        "data/sequence.xml",
+        "views/stock_check_order.xml",
+        "views/stock_adjustment_order.xml"
 
     ],
     "assets": {
         "web.assets_backend": [
             "autonsi_stock_adjustment/static/src/js/stock_check_order_button.js",
+            "autonsi_stock_adjustment/static/src/js/stock_check_save_order_button.js",
         ],
         'web.assets_qweb': [
             "autonsi_stock_adjustment/static/src/xml/stock_check_order_button.xml",

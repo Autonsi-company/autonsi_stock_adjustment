@@ -10,11 +10,17 @@
 <!--</templates>-->
 
 <templates>
-	<t t-extend="ListView.buttons" t-name="button_create_stock_check_order.buttons">
-		<t t-jquery="button.o_list_button_add" t-operation="replace">
-			<button type="button" class="btn btn-primary open_wizard_action" style="margin-right: 5px">
-            	Create
-			</button>
-		</t>
-	</t>
+    <t t-extend="ListView.buttons" t-name="button_create_stock_check_order.buttons">
+        <t t-jquery="button.o_list_button_add" t-operation="replace">
+            <button type="button" class="btn btn-primary open_wizard_action" style="margin-right: 5px">
+                Create
+            </button>
+        </t>
+    </t>
+    <t t-extend="ListView.buttons" t-name="button_save_stock_check_order.buttons">
+        <t t-jquery="button.o_list_button_add" t-operation="after">
+            <button type="button" class="btn btn-primary save_check_order_detail_action">Save Order Check</button>
+
+        </t>
+    </t>
 </templates>
