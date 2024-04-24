@@ -10,6 +10,7 @@
                             <field name="parent_location" string="Area" readonly="1"/>
                             <field name="rack_name" string="Rack" readonly="1"/>
                             <field name="show_apply" invisible="1"/>
+                            <field name="saved" invisible="1"/>
                         </group>
                         <group>
                             <field name="start_date"/>
@@ -25,7 +26,7 @@
                                     <field name="lot_id" readonly="1"/>
                                     <field name="available_qty" readonly="1"/>
                                     <field name="on_hand_qty" readonly="1"/>
-                                    <field name="counted_qty"/>
+                                    <field name="counted_qty" attrs="{'readonly': [('parent.saved','=', True)]}"/>
                                     <field name="difference" readonly="1"/>
                                     <field name="write_uid"/>
                                 </tree>

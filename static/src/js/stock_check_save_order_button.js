@@ -10,15 +10,25 @@ odoo.define("button_save_stock_check_order.tree_button", function (require) {
         events: _.extend({}, ListController.prototype.events, {
             "click .save_check_order_detail_action": "_SaveOrderCheckDetail"
         }),
-        _SaveOrderCheckDetail: function () {
+        _SaveOrderCheckDetail: async function () {
             var self = this;
             console.log(this.model.loadParams.context.active_id)
             console.log(this.model.loadParams.context)
             var quant_to_update = this.model.loadParams.context.quant_to_update
-            self._rpc({
+            await self._rpc({
                 model: 'stock.check.order',
                 method: "save_check_order_detail",
-                args:[this.model.loadParams.context.active_id,quant_to_update]
+                args: [this.model.loadParams.context.active_id, quant_to_update]
+            });
+            await this.do_action({
+                type: "ir.actions.act_window",
+                name: "Open Sale Order Form View",
+                res_model: "stock.check.order",
+                target: "current",
+                view_mode: "form",
+                view_type: "form",
+                res_id: this.model.loadParams.context.active_id,
+                views: [[false, "form"]],
             });
         }
     });

@@ -68,6 +68,7 @@ class StockCheckOrder(models.Model):
     detail_ids = fields.One2many("stock.check.order.detail", "check_order_id")
     name = fields.Char('Name', default='New')
     show_apply = fields.Boolean(compute='show_apply_button')
+    saved = fields.Boolean('Saved', default=False)
 
     def show_apply_button(self):
         for rec in self:
@@ -142,17 +143,8 @@ class StockCheckOrder(models.Model):
             detail.available_qty = detail.quant_id.available_quantity
             detail.on_hand_qty = detail.quant_id.quantity
             detail.difference = 0
+        self.saved = True
 
-        return {
-            'name': self.name,
-            'res_model': "stock.check.order",
-            'view_id': self.env.ref('autonsi_stock_adjustment.view_stock_check_order_form').id,
-            "view_type": "form",
-            "view_mode": "form",
-            'target': "current",
-            'res_id': self.id,
-            'type': 'ir.actions.act_window'
-        }
 
 
 class StockQuant(models.Model):
