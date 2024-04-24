@@ -60,7 +60,7 @@ class StockAdjustmentOrder(models.Model):
     def create(self, vals):
         if vals.get("name", "New") == "New":
             vals["name"] = (
-                self.env["ir.sequence"].next_by_code("stock.adjustment.order") or "New"
+                    self.env["ir.sequence"].next_by_code("stock.adjustment.order") or "New"
             )
         res = super(StockAdjustmentOrder, self).create(vals)
         return res
@@ -85,7 +85,7 @@ class StockCheckOrder(models.Model):
     detail_ids = fields.One2many("stock.check.order.detail", "check_order_id")
     name = fields.Char("Name", default="New")
     show_apply = fields.Boolean(compute="show_apply_button")
-    saved = fields.Boolean("Saved", default=False)
+    state = fields.Selection([('undone', 'Undone'), ('done', 'Done')], default='undone')
 
     def show_apply_button(self):
         for rec in self:
@@ -97,7 +97,7 @@ class StockCheckOrder(models.Model):
     def create(self, vals):
         if vals.get("name", "New") == "New":
             vals["name"] = (
-                self.env["ir.sequence"].next_by_code("stock.check.order") or "New"
+                    self.env["ir.sequence"].next_by_code("stock.check.order") or "New"
             )
         res = super(StockCheckOrder, self).create(vals)
         return res
@@ -179,7 +179,7 @@ class StockCheckOrder(models.Model):
             detail.available_qty = detail.quant_id.available_quantity
             detail.on_hand_qty = detail.quant_id.quantity
             detail.difference = 0
-        self.saved = True
+        self.state = 'done'
 
 
 class StockQuant(models.Model):
@@ -194,7 +194,7 @@ class StockQuant(models.Model):
         ctx = dict(self.env.context or {})
         ctx["no_at_date"] = True
         if self.user_has_groups("stock.group_stock_user") and not self.user_has_groups(
-            "stock.group_stock_manager"
+                "stock.group_stock_manager"
         ):
             ctx["search_default_my_count"] = True
         action = {
