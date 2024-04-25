@@ -2,6 +2,7 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_stock_adjustment_order,access_stock_adjustment_order,model_stock_adjustment_order,base.group_user,1,1,1,1
 access_stock_check_order,access_stock_check_order,model_stock_check_order,base.group_user,1,1,1,1
 access_stock_check_order_detail,access_stock_check_order_detail,model_stock_check_order_detail,base.group_user,1,1,1,1
+access_stock_check_order_history,access_stock_check_order_history,model_stock_check_order_history,base.group_user,1,1,1,1
 
 
 

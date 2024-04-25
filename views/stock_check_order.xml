@@ -37,6 +37,18 @@
                                     attrs="{'invisible': [('show_apply', '!=',True)]}" string="Apply"
                                     type="object" class="oe_highlight" groups="base.group_user" data-hotkey="x"/>
                         </page>
+                        <page string="History" attrs="{'invisible':[('state','!=','done')]}">
+                            <field name="history_ids" readonly="1">
+                                <tree  >
+                                    <field name="bin_id" />
+                                    <field name="product_id" />
+                                    <field name="lot_id" />
+                                    <field name="before_qty"/>
+                                    <field name="after_qty" />
+                                    <field name="counted_by" widget="many2many_tags"/>
+                                </tree>
+                            </field>
+                        </page>
                     </notebook>
                 </sheet>
             </form>

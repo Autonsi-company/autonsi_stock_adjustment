@@ -21,4 +21,14 @@ class CheckOrderDetail(models.Model):
         for rec in self:
             rec.difference = rec.counted_qty - rec.on_hand_qty
 
-# test CI-DC
+
+class CheckOrderHistory(models.Model):
+    _name = "stock.check.order.history"
+
+    check_order_id = fields.Many2one("stock.check.order")
+    bin_id = fields.Many2one("stock.location")
+    product_id = fields.Many2one("product.product")
+    lot_id = fields.Many2one("stock.production.lot")
+    before_qty = fields.Float("Before Quantity")
+    after_qty = fields.Float("After Quantity")
+    counted_by = fields.Many2many("res.partner")
