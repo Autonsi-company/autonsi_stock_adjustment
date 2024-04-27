@@ -45,6 +45,11 @@
                                     <field name="lot_id" />
                                     <field name="before_qty"/>
                                     <field name="after_qty" />
+                                    <field name="gap" decoration-muted="gap == 0"
+                       decoration-danger="gap &lt; 0"
+                       decoration-success="gap &gt; 0"
+                       decoration-bf="gap != 0"/>
+                                    <field name="adjustment_reason"/>
                                     <field name="counted_by" widget="many2many_tags"/>
                                 </tree>
                             </field>
@@ -101,6 +106,7 @@
                 <field name="inventory_date" optional="show"/>
                 <field name="user_id" string="User" optional="show"/>
                 <field name='company_id' groups="base.group_multi_company" optional="hide"/>
+                <field name="adjustment_reason"/>
                 <button name="action_inventory_history" type="object" class="btn btn-link text-info" icon="fa-history"
                         string="History"/>
                 <button name="action_apply_inventory" groups="stock.group_stock_manager" type="object" string="Apply"

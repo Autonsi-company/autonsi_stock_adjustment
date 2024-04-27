@@ -32,3 +32,5 @@ class CheckOrderHistory(models.Model):
     before_qty = fields.Float("Before Quantity")
     after_qty = fields.Float("After Quantity")
     counted_by = fields.Many2many("res.partner")
+    gap = fields.Float("Gap")
+    adjustment_reason = fields.Char("Adjustment Reason")
