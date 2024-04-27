@@ -117,6 +117,7 @@ class StockCheckOrder(models.Model):
             if detail.difference != 0:
                 if detail.quant_id:
                     detail.quant_id.inventory_quantity = detail.counted_qty
+                    detail.quant_id.adjustment_reason = ""
                 quant_to_update.append(detail.quant_id.id)
                 check_order_detail_to_update.append(detail.id)
         domain = [("id", "in", quant_to_update)]
@@ -184,7 +185,9 @@ class StockCheckOrder(models.Model):
                 'lot_id': detail.lot_id.id,
                 'before_qty': detail.on_hand_qty,
                 'after_qty': detail.counted_qty,
-                'counted_by': detail.check_order_id.worker_id.ids
+                'counted_by': detail.check_order_id.worker_id.ids,
+                'gap': detail.difference,
+                'adjustment_reason': detail.quant_id.adjustment_reason
             }))
             detail.available_qty = detail.quant_id.available_quantity
             detail.on_hand_qty = detail.quant_id.quantity
