@@ -26,9 +26,9 @@
                                     <field name="bin_id" readonly="1"/>
                                     <field name="product_id" readonly="1"/>
                                     <field name="lot_id" readonly="1"/>
-                                    <field name="available_qty" readonly="1"/>
-                                    <field name="on_hand_qty" readonly="1"/>
-                                    <field name="counted_qty" attrs="{'readonly': [('parent.state','=', 'done')]}"/>
+                                    <field name="available_qty" readonly="1" digits="[16,0]"/>
+                                    <field name="on_hand_qty" readonly="1" digits="[16,0]"/>
+                                    <field name="counted_qty" attrs="{'readonly': [('parent.state','=', 'done')]}" digits="[16,0]"/>
                                     <field name="difference" readonly="1"/>
                                     <field name="write_uid"/>
                                 </tree>
@@ -43,8 +43,8 @@
                                     <field name="bin_id" />
                                     <field name="product_id" />
                                     <field name="lot_id" />
-                                    <field name="before_qty"/>
-                                    <field name="after_qty" />
+                                    <field name="before_qty" digits="[16,0]"/>
+                                    <field name="after_qty" digits="[16,0]" />
                                     <field name="gap" decoration-muted="gap == 0"
                        decoration-danger="gap &lt; 0"
                        decoration-success="gap &gt; 0"
@@ -93,11 +93,11 @@
                 <field name="owner_id" groups="stock.group_tracking_owner" attrs="{'readonly': [('id', '!=', False)]}"
                        options="{'no_create': True}"/>
                 <field name="available_quantity" string="Available Quantity"
-                       decoration-danger="available_quantity &lt; 0" optional="hidden"/>
-                <field name="quantity" optional="show" string="On Hand Quantity"/>
+                       decoration-danger="available_quantity &lt; 0" optional="hidden" digits="[16,0]"/>
+                <field name="quantity" optional="show" string="On Hand Quantity" digits="[16,0]"/>
                 <field name="product_uom_id" groups="uom.group_uom" string="UoM"/>
-                <field name="inventory_quantity" widget="counted_quantity_widget"/>
-                <field name="inventory_diff_quantity" string="Difference"
+                <field name="inventory_quantity" widget="counted_quantity_widget" digits="[16,0]"/>
+                <field name="inventory_diff_quantity" string="Difference" digits="[16,0]"
                        attrs="{'invisible': [('inventory_quantity_set', '=', False)]}"
                        decoration-muted="inventory_diff_quantity == 0"
                        decoration-danger="inventory_diff_quantity &lt; 0"
