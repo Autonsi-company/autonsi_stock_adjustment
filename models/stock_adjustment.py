@@ -28,12 +28,20 @@ class StockAdjustmentOrder(models.Model):
                     ]
                 )
                 print(bin_ids)
-                quants = self.env["stock.quant"].search(
-                    [
-                        ("location_id", "=", bin_ids.ids),
-                        ("available_quantity", ">", 0),
-                    ]
-                )
+                if check_order.product_ids:
+                    quants = self.env["stock.quant"].search(
+                        [('product_id', 'in', check_order.product_ids.ids),
+                         ("location_id", "=", bin_ids.ids),
+                         ("available_quantity", ">", 0),
+                         ]
+                    )
+                else:
+                    quants = self.env["stock.quant"].search(
+                        [
+                            ("location_id", "=", bin_ids.ids),
+                            ("available_quantity", ">", 0),
+                        ]
+                    )
                 detail_list = []
                 for quant in quants:
                     detail_list.append(
@@ -87,6 +95,29 @@ class StockCheckOrder(models.Model):
     name = fields.Char("Name", default="New")
     show_apply = fields.Boolean(compute="show_apply_button")
     state = fields.Selection([('undone', 'Undone'), ('done', 'Done')], default='undone')
+    available_product_ids = fields.Many2many('product.product', compute='_compute_product_ids', store=True)
+    product_ids = fields.Many2many('product.product', relation="check_order_product_id_rel",
+                                   column1="check_order_id",
+                                   column2="product_id")
+
+    @api.depends('location_id')
+    def _compute_product_ids(self):
+        for order in self:
+            child_rack = self.env['stock.location'].search(
+                [('location_type', '=', 'rack'), ('location_id', '=', order.location_id.id)])
+            child_bin = self.env['stock.location'].search(
+                [('location_type', '=', 'bin'), ('location_id', 'in', child_rack.ids)])
+            child_location_list = self.env['stock.location'].search(
+                ['|', '|', ('location_id', '=', order.location_id.id),
+                 ('location_id', '=', child_rack.ids),
+                 ('location_id', '=', child_bin.ids)])
+            quants = order.env["stock.quant"].search(
+                ['|', ("location_id", "=", child_location_list.ids),
+                 ("location_id", "=", order.location_id.id),
+                 ("available_quantity", ">", 0),
+                 ]
+            )
+            order.available_product_ids = quants.mapped('product_id')
 
     def show_apply_button(self):
         for rec in self:
