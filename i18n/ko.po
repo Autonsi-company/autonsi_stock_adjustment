@@ -1,0 +1,389 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* autonsi_stock_adjustment
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0-20240624\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-29 03:04+0000\n"
+"PO-Revision-Date: 2024-07-29 03:04+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: autonsi_stock_adjustment
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_check_order__adjustment_order_id
+msgid "Adjustment Order"
+msgstr "조정 순서"
+
+#. module: autonsi_stock_adjustment
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_check_order_history__adjustment_reason
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_quant__adjustment_reason
+msgid "Adjustment Reason"
+msgstr "조정 사유"
+
+#. module: autonsi_stock_adjustment
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_check_order_history__after_qty
+msgid "After Quantity"
+msgstr "수량 후"
+
+#. module: autonsi_stock_adjustment
+#: model_terms:ir.ui.view,arch_db:autonsi_stock_adjustment.view_check_order_apply_quant
+#: model_terms:ir.ui.view,arch_db:autonsi_stock_adjustment.view_stock_check_order_form
+msgid "Apply"
+msgstr "적용 항목"
+
+#. module: autonsi_stock_adjustment
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_adjustment_order__location_id
+#: model_terms:ir.ui.view,arch_db:autonsi_stock_adjustment.view_stock_check_order_form
+msgid "Area"
+msgstr "구역"
+
+#. module: autonsi_stock_adjustment
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_check_order__available_product_ids
+msgid "Available Product"
+msgstr "사용 가능한 제품"
+
+#. module: autonsi_stock_adjustment
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_check_order_detail__available_qty
+#: model_terms:ir.ui.view,arch_db:autonsi_stock_adjustment.view_check_order_apply_quant
+msgid "Available Quantity"
+msgstr "사용 가능한 제품"
+
+#. module: autonsi_stock_adjustment
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_check_order_history__before_qty
+msgid "Before Quantity"
+msgstr "수량 전"
+
+#. module: autonsi_stock_adjustment
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_check_order_detail__bin_id
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_check_order_history__bin_id
+msgid "Bin"
+msgstr ""
+
+#. module: autonsi_stock_adjustment
+#: model_terms:ir.ui.view,arch_db:autonsi_stock_adjustment.view_stock_check_order_form
+msgid "Check"
+msgstr "입고 진행"
+
+#. module: autonsi_stock_adjustment
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_adjustment_order__check_order_ids
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_check_order_detail__check_order_id
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_check_order_history__check_order_id
+msgid "Check Order"
+msgstr "주문 확인"
+
+#. module: autonsi_stock_adjustment
+#: model_terms:ir.ui.view,arch_db:autonsi_stock_adjustment.view_check_order_apply_quant
+msgid "Clear"
+msgstr "분명한"
+
+#. module: autonsi_stock_adjustment
+#: model_terms:ir.ui.view,arch_db:autonsi_stock_adjustment.view_stock_adjustment_order_form
+msgid "Confirm"
+msgstr "승인"
+
+#. module: autonsi_stock_adjustment
+#: model:ir.model.fields.selection,name:autonsi_stock_adjustment.selection__stock_adjustment_order__state__confirmed
+msgid "Confirmed"
+msgstr "확정됨"
+
+#. module: autonsi_stock_adjustment
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_check_order_history__counted_by
+msgid "Counted By"
+msgstr "에 의해 계산됨"
+
+#. module: autonsi_stock_adjustment
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_check_order_detail__counted_qty
+msgid "Counted Quantity"
+msgstr "계산된 수량"
+
+#. module: autonsi_stock_adjustment
+#. openerp-web
+#: code:addons/autonsi_stock_adjustment/static/src/xml/stock_check_order_button.xml:0
+#, python-format
+msgid "Create"
+msgstr "만들다"
+
+#. module: autonsi_stock_adjustment
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_adjustment_order__create_uid
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_check_order__create_uid
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_check_order_detail__create_uid
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_check_order_history__create_uid
+msgid "Created by"
+msgstr "만든 사람"
+
+#. module: autonsi_stock_adjustment
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_adjustment_order__create_date
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_check_order__create_date
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_check_order_detail__create_date
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_check_order_history__create_date
+msgid "Created on"
+msgstr "에 만든"
+
+#. module: autonsi_stock_adjustment
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_check_order__detail_ids
+msgid "Detail"
+msgstr "세부 사항"
+
+#. module: autonsi_stock_adjustment
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_check_order_detail__difference
+#: model_terms:ir.ui.view,arch_db:autonsi_stock_adjustment.view_check_order_apply_quant
+msgid "Difference"
+msgstr "차이점"
+
+#. module: autonsi_stock_adjustment
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_adjustment_order__display_name
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_check_order__display_name
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_check_order_detail__display_name
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_check_order_history__display_name
+msgid "Display Name"
+msgstr "공급업체 코드"
+
+#. module: autonsi_stock_adjustment
+#: model:ir.model.fields.selection,name:autonsi_stock_adjustment.selection__stock_adjustment_order__state__done
+#: model:ir.model.fields.selection,name:autonsi_stock_adjustment.selection__stock_check_order__state__done
+msgid "Done"
+msgstr "완료"
+
+#. module: autonsi_stock_adjustment
+#: model:ir.model.fields.selection,name:autonsi_stock_adjustment.selection__stock_adjustment_order__state__draft
+msgid "Draft"
+msgstr "초안"
+
+#. module: autonsi_stock_adjustment
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_adjustment_order__end_date
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_check_order__end_date
+msgid "End Date"
+msgstr "종료일"
+
+#. module: autonsi_stock_adjustment
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_check_order_history__gap
+msgid "Gap"
+msgstr "갭"
+
+#. module: autonsi_stock_adjustment
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_check_order__history_ids
+#: model_terms:ir.ui.view,arch_db:autonsi_stock_adjustment.view_check_order_apply_quant
+#: model_terms:ir.ui.view,arch_db:autonsi_stock_adjustment.view_stock_check_order_form
+msgid "History"
+msgstr "역사"
+
+#. module: autonsi_stock_adjustment
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_adjustment_order__id
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_check_order__id
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_check_order_detail__id
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_check_order_history__id
+msgid "ID"
+msgstr ""
+
+#. module: autonsi_stock_adjustment
+#: code:addons/autonsi_stock_adjustment/models/stock_adjustment.py:0
+#, python-format
+msgid "Import"
+msgstr "수입"
+
+#. module: autonsi_stock_adjustment
+#: code:addons/autonsi_stock_adjustment/models/stock_adjustment.py:0
+#, python-format
+msgid "Inventory Adjustments"
+msgstr "재고 조정"
+
+#. module: autonsi_stock_adjustment
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_adjustment_order____last_update
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_check_order____last_update
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_check_order_detail____last_update
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_check_order_history____last_update
+msgid "Last Modified on"
+msgstr "마지막 수정일"
+
+#. module: autonsi_stock_adjustment
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_adjustment_order__write_uid
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_check_order__write_uid
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_check_order_detail__write_uid
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_check_order_history__write_uid
+msgid "Last Updated by"
+msgstr "마지막 업데이트"
+
+#. module: autonsi_stock_adjustment
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_adjustment_order__write_date
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_check_order__write_date
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_check_order_detail__write_date
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_check_order_history__write_date
+msgid "Last Updated on"
+msgstr "마지막 업데이트 날짜"
+
+#. module: autonsi_stock_adjustment
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_check_order__rack_name
+msgid "Location Name"
+msgstr "위치 명"
+
+#. module: autonsi_stock_adjustment
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_check_order_detail__lot_id
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_check_order_history__lot_id
+msgid "Lot"
+msgstr ""
+
+#. module: autonsi_stock_adjustment
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_adjustment_order__name
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_check_order__name
+msgid "Name"
+msgstr "이름"
+
+#. module: autonsi_stock_adjustment
+#: model_terms:ir.ui.view,arch_db:autonsi_stock_adjustment.view_check_order_apply_quant
+msgid "On Hand Quantity"
+msgstr "보유 수량"
+
+#. module: autonsi_stock_adjustment
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_check_order_detail__on_hand_qty
+msgid "On hand Quantity"
+msgstr "보유 수량"
+
+#. module: autonsi_stock_adjustment
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_check_order__parent_location
+msgid "Parent Location"
+msgstr "부모님의 위치"
+
+#. module: autonsi_stock_adjustment
+#: code:addons/autonsi_stock_adjustment/models/stock_adjustment.py:0
+#, python-format
+msgid ""
+"Press the CREATE button to define quantity for each product in your stock or"
+" import them from a spreadsheet throughout Favorites"
+msgstr ""
+
+#. module: autonsi_stock_adjustment
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_check_order__product_ids
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_check_order_detail__product_id
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_check_order_history__product_id
+msgid "Product"
+msgstr "제품"
+
+#. module: autonsi_stock_adjustment
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_check_order_detail__quant_id
+msgid "Quant"
+msgstr "수량
+
+#. module: autonsi_stock_adjustment
+#: model:ir.model,name:autonsi_stock_adjustment.model_stock_quant
+msgid "Quants"
+msgstr "수량"
+
+#. module: autonsi_stock_adjustment
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_check_order__location_id
+#: model_terms:ir.ui.view,arch_db:autonsi_stock_adjustment.view_stock_adjustment_order_form
+#: model_terms:ir.ui.view,arch_db:autonsi_stock_adjustment.view_stock_check_order_form
+msgid "Rack"
+msgstr ""
+
+#. module: autonsi_stock_adjustment
+#: model_terms:ir.ui.view,arch_db:autonsi_stock_adjustment.view_check_order_apply_quant
+msgid "Request a Count"
+msgstr "요청 수"
+
+#. module: autonsi_stock_adjustment
+#: model_terms:ir.ui.view,arch_db:autonsi_stock_adjustment.view_stock_check_order_tree
+msgid "SO #"
+msgstr ""
+
+#. module: autonsi_stock_adjustment
+#. openerp-web
+#: code:addons/autonsi_stock_adjustment/static/src/xml/stock_check_order_button.xml:0
+#, python-format
+msgid "Save Order Check"
+msgstr "구하다"
+
+#. module: autonsi_stock_adjustment
+#: model_terms:ir.ui.view,arch_db:autonsi_stock_adjustment.view_check_order_apply_quant
+msgid "Set"
+msgstr ""
+
+#. module: autonsi_stock_adjustment
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_check_order__show_apply
+msgid "Show Apply"
+msgstr "보기 적용"
+
+#. module: autonsi_stock_adjustment
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_adjustment_order__start_date
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_check_order__start_date
+msgid "Start Date"
+msgstr "시작 날짜"
+
+#. module: autonsi_stock_adjustment
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_adjustment_order__state
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_check_order__state
+msgid "State"
+msgstr "상태"
+
+#. module: autonsi_stock_adjustment
+#: model:ir.ui.menu,name:autonsi_stock_adjustment.menu_stock_adjustment
+msgid "Stock Adjustment"
+msgstr "재고 조정"
+
+#. module: autonsi_stock_adjustment
+#: model:ir.actions.act_window,name:autonsi_stock_adjustment.action_stock_check_order_tree
+#: model:ir.ui.menu,name:autonsi_stock_adjustment.menu_stock_check_order
+msgid "Stock Check Order"
+msgstr "재고 실사 지시서"
+
+#. module: autonsi_stock_adjustment
+#: model_terms:ir.actions.act_window,help:autonsi_stock_adjustment.action_stock_check_order_tree
+msgid "This is a help message for the action."
+msgstr ""
+
+#. module: autonsi_stock_adjustment
+#: model:ir.model.fields.selection,name:autonsi_stock_adjustment.selection__stock_check_order__state__undone
+msgid "Undone"
+msgstr ""
+
+#. module: autonsi_stock_adjustment
+#: model_terms:ir.ui.view,arch_db:autonsi_stock_adjustment.view_check_order_apply_quant
+msgid "UoM"
+msgstr "단위"
+
+#. module: autonsi_stock_adjustment
+#: code:addons/autonsi_stock_adjustment/models/stock_adjustment.py:0
+#, python-format
+msgid "Update Quantity"
+msgstr "수량 업데이트"
+
+#. module: autonsi_stock_adjustment
+#: model_terms:ir.ui.view,arch_db:autonsi_stock_adjustment.view_check_order_apply_quant
+msgid "User"
+msgstr "사용자"
+
+#. module: autonsi_stock_adjustment
+#: model:ir.model.fields,field_description:autonsi_stock_adjustment.field_stock_check_order__worker_id
+msgid "Worker"
+msgstr "노동자"
+
+#. module: autonsi_stock_adjustment
+#: code:addons/autonsi_stock_adjustment/models/stock_adjustment.py:0
+#, python-format
+msgid "Your stock is currently empty"
+msgstr ""
+
+#. module: autonsi_stock_adjustment
+#: model:ir.model,name:autonsi_stock_adjustment.model_stock_adjustment_order
+msgid "stock.adjustment.order"
+msgstr ""
+
+#. module: autonsi_stock_adjustment
+#: model:ir.model,name:autonsi_stock_adjustment.model_stock_check_order
+msgid "stock.check.order"
+msgstr ""
+
+#. module: autonsi_stock_adjustment
+#: model:ir.model,name:autonsi_stock_adjustment.model_stock_check_order_detail
+msgid "stock.check.order.detail"
+msgstr ""
+
+#. module: autonsi_stock_adjustment
+#: model:ir.model,name:autonsi_stock_adjustment.model_stock_check_order_history
+msgid "stock.check.order.history"
+msgstr ""
